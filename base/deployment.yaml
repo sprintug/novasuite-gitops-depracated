@@ -40,8 +40,8 @@ spec:
           value: "5432"
         - name: DB_USERNAME
           value: "postgres"
-        - name: DB_PASSWORD
-          value: "plaintextpassword"
+        # - name: DB_PASSWORD
+        #   value: "postgres"
           # value: "postgres"
         # - name: DB_DATABASE
         #   value: "maven_test"
