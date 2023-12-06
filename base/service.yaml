@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: todos-service
+  name: hms-service
   labels:
-    service: todos
+    service: hms
 spec:
   selector:
-    app: todos
+    app: hms
   type: LoadBalancer
   ports:
-    - port: 3000
+    - port: 9000

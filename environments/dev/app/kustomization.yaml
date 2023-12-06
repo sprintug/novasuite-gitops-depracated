@@ -1,4 +1,4 @@
-namespace: dev
+namespace: develop
 replicas:
   - name: hms-deployment
     count: 1
