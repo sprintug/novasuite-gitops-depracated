@@ -68,5 +68,4 @@ spec:
         - name: REFRESH_TOKEN_EXPIRATION
           value: "24hrs"
 
-
       restartPolicy: Always
