@@ -26,11 +26,11 @@ spec:
             secretKeyRef:
               name: postgres-credentials
               key: user
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgres-credentials
-              key: password
+        # - name: POSTGRES_PASSWORD
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: postgres-credentials
+        #       key: password
     
 
         - name: DB_HOST
@@ -40,9 +40,9 @@ spec:
           value: "5432"
         - name: DB_USERNAME
           value: "postgres"
-        # - name: DB_PASSWORD
-        #   value: "postgres"
-          # value: "postgres"
+        - name: DB_PASSWORD
+          # value: "plaintextpassword"
+          value: "postgres"
         # - name: DB_DATABASE
         #   value: "maven_test"
         - name: EMAIL_NOTIFICATION_PASSWORD
