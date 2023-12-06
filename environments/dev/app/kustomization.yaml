@@ -1,11 +1,9 @@
 namespace: dev
 replicas:
-  - name: todos-deployment
+  - name: hms-deployment
     count: 1
 images:
-  - name: emmamichael/todos-test
-    # newTag: v0.1.0.9
-    # newTag: v0.12.2
+  - name: sprintugdevs/hms-backend
     
 resources:
   - ../../../base
@@ -13,19 +11,19 @@ resources:
 patches:
   - target:
       kind: Service
-      name: todos-service
+      name: hms-service
     patch: |-
       - op: replace
         path: /spec/ports/0/port
-        value: 3003
+        value: 9000
 
   - target:
       kind: Deployment
-      name: todos-deployment
+      name: hms-deployment
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/1/value
-        value: "3003"
+        value: "9000"
 
   - target:
       kind: PersistentVolume
@@ -37,7 +35,7 @@ patches:
 
       - op: replace
         path: /spec/hostPath/path
-        value: "/home/michael/volDev"  
+        value: "/home/sprintdevs/dev-vol"  
 
   - target:
       kind: PersistentVolumeClaim

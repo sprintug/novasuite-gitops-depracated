@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - emmamichael/todos-test:0137cd5
