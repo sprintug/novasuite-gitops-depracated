@@ -29,7 +29,7 @@ patches:
 
   - target:
       kind: PersistentVolume
-      name: postgres-pv-test
+      name: postgres-pv-hms
     # patch: pv-patch.yaml  
     patch: |-  
       - op: replace
@@ -42,7 +42,7 @@ patches:
 
   - target:
       kind: PersistentVolumeClaim
-      name: postgres-pvc-test
+      name: postgres-pvc-hms
     # patch: pvc-patch.yaml 
     patch: |-  
       - op: replace

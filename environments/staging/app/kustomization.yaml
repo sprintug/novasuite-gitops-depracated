@@ -1,54 +1,50 @@
-# environments/staging/my-app/kustomization.yaml
-
 namespace: staging
 replicas:
-  - name: todos-deployment
+  - name: hms-deployment
     count: 1
 images:
-  - name: emmamichael/todos-test
-    # newTag: v0.1.0.1
+  - name: sprintugdevs/hms-backend
+    
 resources:
   - ../../../base
 
 patches:
   - target:
       kind: Service
-      name: todos-service
+      name: hms-service
     patch: |-
       - op: replace
         path: /spec/ports/0/port
-        value: 3002
+        value: 9000
 
   - target:
       kind: Deployment
-      name: todos-deployment
+      name: hms-deployment
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/1/value
-        value: "3002"
+        value: "9000"
 
   - target:
       kind: PersistentVolume
-      name: postgres-pv-test
-    # patch: pv-patch.yaml  
+      name: postgres-pv-hms-staging
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pv-staging
+        value: postgres-pv-hms-staging
 
       - op: replace
         path: /spec/hostPath/path
-        value: "/home/michael/volStaging"  
+        value: "/home/sprintdevs/staging-vol"  
 
   - target:
       kind: PersistentVolumeClaim
-      name: postgres-pvc-test
-    # patch: pvc-patch.yaml 
+      name: postgres-pvc-hms-staging
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pvc-staging
+        value: postgres-pvc-hms-staging
 
       - op: replace
         path: /spec/volumeName
-        value: postgres-pv-staging
+        value: postgres-pv-hms-staging
