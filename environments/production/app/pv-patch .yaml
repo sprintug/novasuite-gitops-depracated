@@ -1,7 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: postgres-pv-production
-
-- op: replace
-  path: /spec/hostPath/path
-  value: "/home/michael/vol-prod"
