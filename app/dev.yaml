@@ -14,7 +14,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/sprintug/hms-git-ops
-    targetRevision: dev # branch to track
+    targetRevision: develop # branch to track
     path: environments/dev/app
   destination:
     server: https://kubernetes.default.svc # cluster where argocd is running
