@@ -34,7 +34,6 @@ spec:
     
 
         - name: DB_HOST
-          # value: "localhost"
           value: "postgres"
         - name: DB_PORT
           value: "5432"
