@@ -1,0 +1,54 @@
+# environments/staging/my-app/kustomization.yaml
+
+namespace: production
+replicas:
+  - name: todos-deployment
+    count: 1
+images:
+  - name: emmamichael/todos-test
+    # newTag: v0.1.0.2
+resources:
+  - ../../../base
+
+patches:
+  - target:
+      kind: Service
+      name: todos-service
+    patch: |-
+      - op: replace
+        path: /spec/ports/0/port
+        value: 3000
+
+  - target:
+      kind: Deployment
+      name: todos-deployment
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/1/value
+        value: "3000"
+
+  - target:
+      kind: PersistentVolume
+      name: postgres-pv-test
+    # patch: pv-patch.yaml  
+    patch: |-  
+      - op: replace
+        path: /metadata/name
+        value: postgres-pv-production
+
+      - op: replace
+        path: /spec/hostPath/path
+        value: "/home/michael/vol-prod"  
+
+  - target:
+      kind: PersistentVolumeClaim
+      name: postgres-pvc-test
+    # patch: pvc-patch.yaml 
+    patch: |-  
+      - op: replace
+        path: /metadata/name
+        value: postgres-pvc-production
+
+      - op: replace
+        path: /spec/volumeName
+        value: postgres-pv-production

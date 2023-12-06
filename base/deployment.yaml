@@ -1,0 +1,56 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: todos-deployment
+#   labels:
+#     app: todos
+# spec:
+#   selector:
+#     matchLabels:
+#       app: todos
+#   template:
+#     metadata:
+#       labels:
+#         app: todos
+#     spec:
+#       containers:
+#         - name: todos
+#           imagePullPolicy: Always
+#           image: emmamichael/todos-test
+#           ports:
+#             - containerPort: 80
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todos-deployment
+  labels:
+    name: todos
+spec:
+  selector:
+    matchLabels:
+      app: todos
+  template:
+    metadata:
+      labels:
+        app: todos
+    spec:
+      containers:
+      - name: todos
+        image: emmamichael/todos-test
+        env:
+        - name: NODE_ENV
+          value: "development"
+        - name: PORT
+          value: "3000"
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: password
+      restartPolicy: Always

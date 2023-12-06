@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todos-service
+  labels:
+    service: todos
+spec:
+  selector:
+    app: todos
+  type: LoadBalancer
+  ports:
+    - port: 3000

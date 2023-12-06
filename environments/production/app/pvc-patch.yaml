@@ -1,0 +1,7 @@
+- op: replace
+  path: /metadata/name
+  value: postgres-pvc-production
+
+- op: replace
+  path: /spec/volumeName
+  value: postgres-pv-production

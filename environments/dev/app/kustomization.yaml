@@ -1,0 +1,52 @@
+namespace: dev
+replicas:
+  - name: todos-deployment
+    count: 1
+images:
+  - name: emmamichael/todos-test
+    # newTag: v0.1.0.9
+    # newTag: v0.12.2
+    
+resources:
+  - ../../../base
+
+patches:
+  - target:
+      kind: Service
+      name: todos-service
+    patch: |-
+      - op: replace
+        path: /spec/ports/0/port
+        value: 3003
+
+  - target:
+      kind: Deployment
+      name: todos-deployment
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/1/value
+        value: "3003"
+
+  - target:
+      kind: PersistentVolume
+      name: postgres-pv-test
+    patch: |-  
+      - op: replace
+        path: /metadata/name
+        value: postgres-pv-dev
+
+      - op: replace
+        path: /spec/hostPath/path
+        value: "/home/michael/volDev"  
+
+  - target:
+      kind: PersistentVolumeClaim
+      name: postgres-pvc-test
+    patch: |-  
+      - op: replace
+        path: /metadata/name
+        value: postgres-pvc-dev
+
+      - op: replace
+        path: /spec/volumeName
+        value: postgres-pv-dev
