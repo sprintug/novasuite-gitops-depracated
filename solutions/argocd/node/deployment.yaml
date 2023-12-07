@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: mwinel/node-kubernetes-web:latest
+        image: mwinel/node-kubernetes
         env:
         - name: NODE_ENV
           value: "development"
