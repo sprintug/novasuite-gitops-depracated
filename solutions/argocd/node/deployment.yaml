@@ -4,7 +4,7 @@ metadata:
   labels:
     app: node
   name: node
-  namespace: default
+  namespace: argocd
 spec:
   replicas: 3
   selector:
