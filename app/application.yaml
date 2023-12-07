@@ -11,7 +11,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sprintug/maven/tree/refactor-maven
+    repoURL: https://github.com/sprintug/novasuite-gitops
     targetRevision: HEAD # branch to track
     path: environments/develop/app
   destination:
