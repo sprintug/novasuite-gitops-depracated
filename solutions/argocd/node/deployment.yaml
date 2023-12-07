@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: node
-  name: node
+    app: novasuite-backend
+  name: novasuite-backend
   namespace: argocd
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: node
+      app: novasuite-backend
   template:
     metadata:
       labels:
-        app: node
+        app: novasuite-backend
     spec:
       containers:
-      - name: node
+      - name: novasuite-backend
         image: mwinel/node-kubernetes
         env:
         - name: NODE_ENV
