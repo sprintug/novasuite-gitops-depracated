@@ -1,6 +1,6 @@
 namespace: develop
 replicas:
-  - name: nginx-deployment
+  - name: novasuite-backend-deployment
     count: 2
 images:
   - name: mwinel/nginx-devops-lesson
