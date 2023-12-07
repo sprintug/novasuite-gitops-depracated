@@ -11,8 +11,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sprintug/novasuite-gitops.git
-    targetRevision: refactor-maven # branch to track
+    repoURL: https://github.com/sprintug/maven/tree/refactor-maven
+    targetRevision: HEAD # branch to track
     path: environments/develop/app
   destination:
     server: https://kubernetes.default.svc # cluster where argocd is running
