@@ -22,7 +22,7 @@ spec:
         - name: NODE_ENV
           value: "development"
         - name: PORT
-          value: "3000"
+          value: "9000"
         - name: POSTGRES_USER
           valueFrom:
             secretKeyRef:
