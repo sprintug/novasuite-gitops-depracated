@@ -3,11 +3,5 @@ kind: Kustomization
 metadata:
   name: arbitrary
 resources:
+  - deployment.yaml
   - namespace.yaml
-  - postgres-credentials.yaml
-  - postgres-volume.yaml
-  - postgres-volume-claim.yaml
-  - postgres-deployment.yaml
-  - postgres-service.yaml
-  - application-deployment.yaml
-  - application-service.yaml

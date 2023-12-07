@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/sprintug/novasuite-gitops
-    targetRevision: main # branch to track
+    targetRevision: HEAD # branch to track
     path: environments/develop/app
   destination:
     server: https://kubernetes.default.svc # cluster where argocd is running
