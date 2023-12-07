@@ -1,21 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
   labels:
-    app: nginx
+    app: node-app
+  name: node-app
+  namespace: default 
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: node
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
       labels:
-        app: nginx
+        app: node-app
     spec:
       containers:
-        - name: nginx
-          imagePullPolicy: Always
-          image: mwinel/nginx-devops-lesson
-          ports:
-            - containerPort: 80
+      - image: mwinel/nginx-devops-lesson:~v0.1 
+        imagePullPolicy: IfNotPresent
+        name: node-app
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
