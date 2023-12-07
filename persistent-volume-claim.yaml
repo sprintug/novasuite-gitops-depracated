@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-pvc-hms
+  name: postgres-pvc-novasuite-backend
   labels:
     type: local
 spec:
@@ -9,6 +9,6 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
-  volumeName: postgres-pv-hms
+      storage: 2Gi
+  volumeName: postgres-pv-novasuite-backend
   storageClassName: standard

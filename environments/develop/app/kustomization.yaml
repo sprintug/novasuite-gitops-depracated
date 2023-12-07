@@ -1,0 +1,9 @@
+namespace: develop
+replicas:
+  - name: novasuite-backend-deployment
+    count: 1
+images:
+  - name: sprintugdevs/novasuite-backend
+    
+resources:
+  - ../../../base

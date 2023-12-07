@@ -1,21 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hms-dev
+  name: novasuite-backend
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: sprintugdevs/hms-backend:~^[0-9a-f]{7}$
+    argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuite-backend:latest
     argocd-image-updater.argoproj.io/write-back-method: git
-    argocd-image-updater.argoproj.io/update-strategy: latest
-    # argocd-image-updater.argoproj.io/allow-tags: "regexp:^[0-9a-f]{7}$"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/sprintug/hms-git-ops
-    targetRevision: dev # branch to track
-    path: environments/dev/app
+    repoURL: https://github.com/sprintug/novasuite-gitops.git
+    targetRevision: refactor-maven # branch to track
+    path: environments/develop/app
   destination:
     server: https://kubernetes.default.svc # cluster where argocd is running
   syncPolicy:
