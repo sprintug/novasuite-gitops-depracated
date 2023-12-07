@@ -9,7 +9,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: node
+      app: node-app
   strategy:
     rollingUpdate:
       maxSurge: 25%
