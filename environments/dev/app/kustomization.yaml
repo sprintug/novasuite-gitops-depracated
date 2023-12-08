@@ -1,6 +1,6 @@
-namespace: develop
+namespace: development
 replicas:
-  - name: hms-deployment
+  - name: hmsystem-deployment
     count: 1
 images:
   - name: sprintugdevs/novasuite-backend
@@ -11,7 +11,7 @@ resources:
 patches:
   - target:
       kind: Service
-      name: hms-service
+      name: hms-sys-service
     patch: |-
       - op: replace
         path: /spec/ports/0/port
@@ -27,11 +27,11 @@ patches:
 
   - target:
       kind: PersistentVolume
-      name: postgres-pv-hmsys-dev
+      name: postgres-pv-hmsystem-dev
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pv-hmsys-dev
+        value: postgres-pv-hmsystem-dev
 
       - op: replace
         path: /spec/hostPath/path
@@ -39,13 +39,13 @@ patches:
 
   - target:
       kind: PersistentVolumeClaim
-      name: postgres-pvc-hmsys-dev
+      name: postgres-pvc-hmsystem-dev
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pvc-hmsys-dev
+        value: postgres-pvc-hmsystem-dev
 
       - op: replace
         path: /spec/volumeName
-        value: postgres-pv-hmsys-dev
+        value: postgres-pv-hmsystem-dev
 # 
