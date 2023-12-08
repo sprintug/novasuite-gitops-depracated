@@ -25,28 +25,28 @@ patches:
         path: /spec/template/spec/containers/0/env/1/value
         value: "9000"
 
-  - target:
-      kind: PersistentVolume
-      name: postgres-pv-hms-dev
-    patch: |-  
-      - op: replace
-        path: /metadata/name
-        value: postgres-pv-hms-dev
+  # - target:
+  #     kind: PersistentVolume
+  #     name: postgres-pv-hms-dev
+  #   patch: |-  
+  #     - op: replace
+  #       path: /metadata/name
+  #       value: postgres-pv-hms-dev
 
-      - op: replace
-        path: /spec/hostPath/path
-        value: "/home/sprintdevs/dev-vol"  
+  #     - op: replace
+  #       path: /spec/hostPath/path
+  #       value: "/home/sprintdevs/dev-vol"  
 
-  - target:
-      kind: PersistentVolumeClaim
-      name: postgres-pvc-hms-dev
-    patch: |-  
-      - op: replace
-        path: /metadata/name
-        value: postgres-pvc-hms-dev
+  # - target:
+  #     kind: PersistentVolumeClaim
+  #     name: postgres-pvc-hms-dev
+  #   patch: |-  
+  #     - op: replace
+  #       path: /metadata/name
+  #       value: postgres-pvc-hms-dev
 
-      - op: replace
-        path: /spec/volumeName
-        value: postgres-pv-hms-dev
+  #     - op: replace
+  #       path: /spec/volumeName
+  #       value: postgres-pv-hms-dev
 # 
 # 
