@@ -4,7 +4,7 @@ metadata:
   labels:
     app: novasuite-backend
   name: novasuite-backend
-  namespace: argocd
+  namespace: develop
 spec:
   replicas: 3
   selector:
