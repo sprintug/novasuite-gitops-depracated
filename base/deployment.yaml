@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hms
-        image: sprintugdevs/hms-backend
+        image: sprintugdevs/novasuite-backend
         env:
         - name: NODE_ENV
           value: "development"
@@ -40,8 +40,6 @@ spec:
           value: "postgres"
         - name: DB_PASSWORD
           value: "postgres"
-        # - name: DB_DATABASE
-        #   value: "maven_test"
         - name: EMAIL_NOTIFICATION_PASSWORD
           value: "pdzkxwrcmllyksqq"
         - name: USER_CREATED_EMAIL_NOTIFICATION_DURATION

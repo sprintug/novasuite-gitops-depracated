@@ -4,7 +4,7 @@ metadata:
   name: hms-dev
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: sprintugdevs/hms-backend:~^[0-9a-f]{7}$
+    argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuite-backend:~^[0-9a-f]{7}$
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/update-strategy: latest
     # argocd-image-updater.argoproj.io/allow-tags: "regexp:^[0-9a-f]{7}$"
