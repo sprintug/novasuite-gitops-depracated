@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hms-system-develop
+  name: hms-system-development
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuite-backend:~^[0-9a-f]{7}$
