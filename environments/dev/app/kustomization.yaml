@@ -1,6 +1,7 @@
 namespace: development
 replicas:
-  - name: hmsystem-deployment
+  - name: hms-deployment
+  # - name: hmsys-deployment
     count: 1
 images:
   - name: sprintugdevs/novasuite-backend
