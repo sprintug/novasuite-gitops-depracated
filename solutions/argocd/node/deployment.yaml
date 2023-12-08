@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: novasuite-backend
-        image: mwinel/node-kubernetes
+        image: sprintugdevs/novasuite-backend
         env:
         - name: NODE_ENV
           value: "development"
@@ -33,4 +33,29 @@ spec:
             secretKeyRef:
               name: postgres-credentials
               key: password
+        - name: EMAIL_NOTIFICATION_PASSWORD
+          value: "pdzkxwrcmllyksqq"
+        - name: USER_CREATED_EMAIL_NOTIFICATION_DURATION
+          value: "1000"
+        - name: RESEND
+          value: "re_CFBzZJDE_BQfmMvCRc6eH5oJD3sV2w6LB"
+        - name: RESEND_API_KEY
+          value: "re_CFBzZJDE_BQfmMvCRc6eH5oJD3sV2w6LB"
+        - name: VERIFY_USER_TOKEN_SECRET
+          value: "MAVENREFRESHTOKENSECRET"
+        - name: VERIFY_USER_TOKEN_EXPIRATION
+          value: "1hr"
+        - name: FRONTEND_URL
+          value: "http://localhost:3000"
+        - name: PAGINATION_BASE_URL
+          value: "http://localhost:9000"
+        - name: ACCESS_TOKEN_SECRET
+          value: "d77a28de410dee3a7a8cce3921f02f2b25b72a8f77cfae425fd8a913a6d2c71ebbf3d8e397ce458d422295aadd1869f337911e3af7570bf19bdb590058696d92"
+        - name: REFRESH_TOKEN_SECRET
+          value: "55ec6a01bb76217382307b597224322e4ad7534c52fcf92120a7e47af42fe647b1ae73f9e27d6a8ffc30209db2f664f797a81122514284fd3126efc60e3b8ff1"
+        - name: ACCESS_TOKEN_EXPIRATION
+          value: "24hrs"
+        - name: REFRESH_TOKEN_EXPIRATION
+          value: "24hrs"
+
       restartPolicy: Always
