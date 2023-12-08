@@ -27,11 +27,11 @@ patches:
 
   - target:
       kind: PersistentVolume
-      name: postgres-pv-hms-dev
+      name: postgres-pv-hmsys-dev
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pv-hms-dev
+        value: postgres-pv-hmsys-dev
 
       - op: replace
         path: /spec/hostPath/path
@@ -39,13 +39,13 @@ patches:
 
   - target:
       kind: PersistentVolumeClaim
-      name: postgres-pvc-hms-dev
+      name: postgres-pvc-hmsys-dev
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pvc-hms-dev
+        value: postgres-pvc-hmsys-dev
 
       - op: replace
         path: /spec/volumeName
-        value: postgres-pv-hms-dev
+        value: postgres-pv-hmsys-dev
 # 

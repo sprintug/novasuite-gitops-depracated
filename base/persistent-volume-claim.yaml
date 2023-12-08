@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-pvc-hms
+  name: postgres-pvc-hmsys
   # namespace: develop
   namespace: argocd
   labels:
@@ -12,5 +12,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  volumeName: postgres-pv-hms
+  volumeName: postgres-pv-hmsys
   storageClassName: standard
