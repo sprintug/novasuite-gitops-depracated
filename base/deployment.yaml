@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hms
-        image: sprintugdevs/novasuite-backend
+        image: sprintugdevs/nova-suite-backend
         env:
         - name: NODE_ENV
           value: "development"
