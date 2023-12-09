@@ -5,7 +5,7 @@ replicas:
 images:
   - name: sprintugdevs/novasuite-backend
      tags:
-      - "regexp:^[0-9a-f]{7}$"   
+      - ~^[0-9a-f]{7}$   
 resources:
   - ../../../base
 
