@@ -8,6 +8,7 @@ metadata:
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/nova-suite-backend
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/update-strategy: latest
+    argocd-image-updater.argoproj.io/ignore-tags: latest, master
     # argocd-image-updater.argoproj.io/allow-tags: "regexp:^[0-9a-f]{7}$"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
