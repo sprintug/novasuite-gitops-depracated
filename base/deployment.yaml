@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hms
-        image: sprintugdevs/novasuite-backend:~^[0-9a-f]{7}$
+        image: sprintugdevs/novasuite-backend
         env:
         - name: NODE_ENV
           value: "development"
