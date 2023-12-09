@@ -1,6 +1,6 @@
 namespace: develop
 replicas:
-  - name: hms-deployments
+  - name: hms-deployment
     count: 1
 images:
   - name: sprintugdevs/novasuites-backend
