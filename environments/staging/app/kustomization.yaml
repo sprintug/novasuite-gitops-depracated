@@ -27,11 +27,11 @@ patches:
 
   - target:
       kind: PersistentVolume
-      name: postgres-pv-hms-staging
+      name: postgres-pv-hms-sys-staging
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pv-hms-staging
+        value: postgres-pv-hms-sys-staging
 
       - op: replace
         path: /spec/hostPath/path
@@ -39,12 +39,12 @@ patches:
 
   - target:
       kind: PersistentVolumeClaim
-      name: postgres-pvc-hms-staging
+      name: postgres-pvc-hms-sys-staging
     patch: |-  
       - op: replace
         path: /metadata/name
-        value: postgres-pvc-hms-staging
+        value: postgres-pvc-hms-sys-staging
 
       - op: replace
         path: /spec/volumeName
-        value: postgres-pv-hms-staging
+        value: postgres-pv-hms-sys-staging
