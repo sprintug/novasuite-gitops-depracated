@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/sprintug/novasuites-gitops
     targetRevision: staging # branch to track
-    path: environments/dev/app
+    path: environments/staging/app
   destination:
     server: https://kubernetes.default.svc # cluster where argocd is running
   syncPolicy:
