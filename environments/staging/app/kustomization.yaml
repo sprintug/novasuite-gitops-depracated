@@ -11,7 +11,7 @@ resources:
 patches:
   - target:
       kind: Service
-      name: hms-service
+      name: hms-sys-service
     patch: |-
       - op: replace
         path: /spec/ports/0/port

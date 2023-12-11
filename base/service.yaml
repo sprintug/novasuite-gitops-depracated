@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hms-service
+  name: hms-sys-service
   namespace: dev
 
   labels:
