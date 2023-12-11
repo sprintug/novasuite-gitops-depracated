@@ -3,8 +3,8 @@ replicas:
   - name: hms-deployment
     count: 1
 images:
-  - name: sprintugdevs/novasuites-backend:c6ca7d8
- 
+  - name: sprintugdevs/novasuites-backend
+  - newTag: c6ca7d8
 resources:
   - ../../../base
 
