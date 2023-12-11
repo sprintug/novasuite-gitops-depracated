@@ -5,7 +5,8 @@ metadata:
   namespace: argocd
   annotations:
     # argocd-image-updater.argoproj.io/image-list: myimage=sprintugdevs/novasuites-backend
-    argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend:~^[0-9a-f]{7}$
+    # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend:~^[0-9a-f]{7}$
+    argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend:new
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend:~^[0-9a-f]{7}$
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend
     argocd-image-updater.argoproj.io/write-back-method: git

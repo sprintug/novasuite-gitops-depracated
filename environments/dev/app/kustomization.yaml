@@ -4,7 +4,7 @@ replicas:
     count: 1
 images:
   - name: sprintugdevs/novasuites-backend
-  - newTag: c6ca7d8
+  - newTag: new
 resources:
   - ../../../base
 
