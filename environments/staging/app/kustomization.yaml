@@ -3,7 +3,7 @@ replicas:
   - name: hms-deployment
     count: 1
 images:
-  - name: sprintugdevs/novasuites-backend
+  - name: sprintugdevs/novasuites-backend-sys
     
 resources:
   - ../../../base
