@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
-  namespace: develop
+  namespace: dev
   labels:
     service: postgres
 spec:
