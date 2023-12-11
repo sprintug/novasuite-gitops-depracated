@@ -9,6 +9,7 @@ metadata:
 spec:
   selector:
     app: hms-development-sys
-  type: NodePort
+  # type: NodePort
+  type: loadBalancer
   ports:
     - port: 9000
