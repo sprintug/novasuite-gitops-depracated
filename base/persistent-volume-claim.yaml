@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-pvc-hms-sys
+  name: postgres-pvc-hms-system
   namespace: develop
   labels:
     type: local
@@ -11,5 +11,5 @@ spec:
   resources:
     requests:
       storage: 20Gi
-  volumeName: postgres-pv-hms-sys
+  volumeName: postgres-pvc-hms-system
   storageClassName: standard
