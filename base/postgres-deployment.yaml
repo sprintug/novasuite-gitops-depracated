@@ -39,5 +39,5 @@ spec:
       volumes:
       - name: postgres-volume-mount
         persistentVolumeClaim:
-          claimName: postgres-pvc-hms-system
+          claimName: postgres-hms-pvc-system
       restartPolicy: Always
