@@ -6,7 +6,7 @@ metadata:
     service: hms
 spec:
   selector:
-    app: hms-deployment
+    app: hms-development-sys
   type: NodePort
   ports:
     - port: 9000

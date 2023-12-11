@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hms-deployment
+  name: hms-development-sys
   labels:
     name: hms
 spec:

@@ -1,6 +1,6 @@
 namespace: staging
 replicas:
-  - name: hms-deployment
+  - name: hms-development-sys
     count: 1
 images:
   - name: sprintugdevs/novasuites-backend-sys
@@ -19,7 +19,7 @@ patches:
 
   - target:
       kind: Deployment
-      name: hms-deployment
+      name: hms-development-sys
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/1/value
