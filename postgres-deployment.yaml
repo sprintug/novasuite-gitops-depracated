@@ -4,7 +4,7 @@ metadata:
   name: postgres
   namespace: develop
   labels:
-    name: database
+    name: postgres
 spec:
   replicas: 1
   selector:
