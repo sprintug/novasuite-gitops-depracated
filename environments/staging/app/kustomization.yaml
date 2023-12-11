@@ -3,7 +3,7 @@ replicas:
   - name: hms-development-sys
     count: 1
 images:
-  - name: sprintugdevs/novasuites-backend-sys
+  - name: emmamichael/todos-test:0137cd5
     
 resources:
   - ../../../base
@@ -25,26 +25,26 @@ patches:
         path: /spec/template/spec/containers/0/env/1/value
         value: "9000"
 
-  - target:
-      kind: PersistentVolume
-      name: postgres-pvc-hms-system-staging
-    patch: |-  
-      - op: replace
-        path: /metadata/name
-        value: postgres-pvc-hms-system-staging
+  # - target:
+  #     kind: PersistentVolume
+  #     name: postgres-pvc-hms-system-staging
+  #   patch: |-  
+  #     - op: replace
+  #       path: /metadata/name
+  #       value: postgres-pvc-hms-system-staging
 
-      - op: replace
-        path: /spec/hostPath/path
-        value: "/home/sprintdevs/staging-vol"  
+  #     - op: replace
+  #       path: /spec/hostPath/path
+  #       value: "/home/sprintdevs/staging-vol"  
 
-  - target:
-      kind: PersistentVolumeClaim
-      name: postgres-pvc-hms-system-staging
-    patch: |-  
-      - op: replace
-        path: /metadata/name
-        value: postgres-pvc-hms-system-staging
+  # - target:
+  #     kind: PersistentVolumeClaim
+  #     name: postgres-pvc-hms-system-staging
+  #   patch: |-  
+  #     - op: replace
+  #       path: /metadata/name
+  #       value: postgres-pvc-hms-system-staging
 
-      - op: replace
-        path: /spec/volumeName
-        value: postgres-pvc-hms-system-staging
+  #     - op: replace
+  #       path: /spec/volumeName
+  #       value: postgres-pvc-hms-system-staging
