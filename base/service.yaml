@@ -33,12 +33,25 @@
 #   ports:
 #     - port: 9000
 
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: hms-development-sys-service
+#   labels:
+#     service: hms-development-sys
+# spec:
+#   selector:
+#     app: hms
+#   type: NodePort
+#   ports:
+#     - port: 9000
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: hms-development-sys-service
+  name: hms-service
   labels:
-    service: hms-development-sys
+    service: hms
 spec:
   selector:
     app: hms
