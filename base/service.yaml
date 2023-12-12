@@ -1,11 +1,28 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: hms-sys-service
+#   # namespace: dev
+
+#   labels:
+#     # service: hms
+#     service: hms-development-sys
+# spec:
+#   selector:
+#     app: hms-development-sys
+#   type: NodePort
+#   ports:
+#     - port: 9000
+#   # ports:
+#   #   - protocol: TCP
+#   #     port: 9000
+#   #     targetPort: 9000
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: hms-sys-service
-  # namespace: dev
-
+  name: hms-development-sys
   labels:
-    # service: hms
     service: hms-development-sys
 spec:
   selector:
@@ -13,7 +30,3 @@ spec:
   type: NodePort
   ports:
     - port: 9000
-  # ports:
-  #   - protocol: TCP
-  #     port: 9000
-  #     targetPort: 9000
