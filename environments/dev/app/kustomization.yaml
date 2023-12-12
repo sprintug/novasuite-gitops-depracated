@@ -9,13 +9,13 @@ resources:
   - ../../../base
 
 patches:
-  - target:
-      kind: Service
-      name: hms-sys-service
-    patch: |-
-      - op: replace
-        path: /spec/ports/0/port
-        value: 9000
+  # - target:
+  #     kind: Service
+  #     name: hms-sys-service
+  #   patch: |-
+  #     - op: replace
+  #       path: /spec/ports/0/port
+  #       value: 9000
 
   - target:
       kind: Deployment
