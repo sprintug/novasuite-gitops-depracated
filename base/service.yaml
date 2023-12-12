@@ -26,7 +26,9 @@ metadata:
     service: hms-development-sys
 spec:
   selector:
-    app: hms-development-sys
+    matchLabels:
+      app: hms-development-sys
+    # app: hms-development-sys
   type: NodePort
   ports:
     - port: 9000
