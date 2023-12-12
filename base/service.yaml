@@ -5,7 +5,8 @@ metadata:
   # namespace: dev
 
   labels:
-    service: hms
+    # service: hms
+    service: hms-development-sys
 spec:
   selector:
     app: hms-development-sys
