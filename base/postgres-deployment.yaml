@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
-  namespace: dev
+  namespace: development
   labels:
     name: database
 spec:
@@ -35,5 +35,5 @@ spec:
       volumes:
       - name: postgres-volume-mount
         persistentVolumeClaim:
-          claimName: postgres-hms-pvc-system
+          claimName: postgres-hms-pvc-sys
       restartPolicy: Always

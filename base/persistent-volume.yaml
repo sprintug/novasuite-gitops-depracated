@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: postgres-hms-pv-system
-  namespace: dev
+  name: postgres-hms-pv-sys
+  namespace: development
   labels:
     type: local
 spec:
@@ -12,5 +12,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/sprintdevs/hms-dev-vol"
+    path: "/home/sprintdevs/hms-dev-volume"
     

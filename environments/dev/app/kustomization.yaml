@@ -1,11 +1,9 @@
-namespace: dev
+namespace: development
 replicas:
-  - name: hms-development-sys
+  - name: hms-development-system
     count: 1
 images:
   - name: sprintugdevs/novasuites-backend-sys
-  # - newTag: latest
-  - newTag: 8bc8948
 resources:
   - ../../../base
 
@@ -20,7 +18,7 @@ patches:
 
   - target:
       kind: Deployment
-      name: hms-development-sys
+      name: hms-development-system
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/1/value
@@ -28,11 +26,11 @@ patches:
 
   # - target:
   #     kind: PersistentVolume
-  #     name: postgres-hms-pv-system-dev
+  #     name: postgres-hms-pv-sys-dev
   #   patch: |-  
   #     - op: replace
   #       path: /metadata/name
-  #       value: postgres-hms-pv-system-dev
+  #       value: postgres-hms-pv-sys-dev
 
   #     - op: replace
   #       path: /spec/hostPath/path
@@ -40,14 +38,14 @@ patches:
 
   # - target:
   #     kind: PersistentVolumeClaim
-  #     name: postgres-hms-pvc-system-dev
+  #     name: postgres-hms-pvc-sys-dev
   #   patch: |-  
   #     - op: replace
   #       path: /metadata/name
-  #       value: postgres-hms-pvc-system-dev
+  #       value: postgres-hms-pvc-sys-dev
 
   #     - op: replace
   #       path: /spec/volumeName
-  #       value: postgres-hms-pvc-system-dev
+  #       value: postgres-hms-pvc-sys-dev
   # 
   # 
