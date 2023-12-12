@@ -4,18 +4,18 @@ metadata:
   name: hms-development-sys
   namespace: argocd
   annotations:
-    # argocd-image-updater.argoproj.io/image-list: myimage=sprintugdevs/novasuites-backend-sys
-    argocd-image-updater.argoproj.io/image-list: "sprintugdevs/novasuites-backend-sys:~^[0-9a-f]{7}$"
+    argocd-image-updater.argoproj.io/image-list: myimage=sprintugdevs/novasuites-backend-sys
+    # argocd-image-updater.argoproj.io/image-list: "sprintugdevs/novasuites-backend-sys:~^[0-9a-f]{7}$"
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend-sys:latest
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend-sys:~^[0-9a-f]{7}$
     # argocd-image-updater.argoproj.io/image-list: sprintugdevs/novasuites-backend-sys
     argocd-image-updater.argoproj.io/write-back-method: git
     # argocd-image-updater.argoproj.io/update-strategy: latest
-    # argocd-image-updater.argoproj.io/myimage.update-strategy: latest
-    argocd-image-updater.argoproj.io/update-strategy: latest
+    argocd-image-updater.argoproj.io/myimage.update-strategy: latest
+    # argocd-image-updater.argoproj.io/update-strategy: latest
     # argocd-image-updater.argoproj.io/myimage.update-strategy: name
     # argocd-image-updater.argoproj.io/myimage.ignore-tags: latest, master
-    # argocd-image-updater.argoproj.io/myimage.allow-tags: "regexp:^[0-9a-f]{7}$"
+    argocd-image-updater.argoproj.io/myimage.allow-tags: "regexp:^[0-9a-f]{7}$"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
