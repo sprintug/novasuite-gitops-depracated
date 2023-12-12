@@ -54,5 +54,6 @@ spec:
           value: "24hrs"
         - name: REFRESH_TOKEN_EXPIRATION
           value: "24hrs"
-
+      
       restartPolicy: Always
+      imagePullPolicy: Always
