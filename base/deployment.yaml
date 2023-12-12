@@ -21,17 +21,6 @@ spec:
           value: "development"
         - name: PORT
           value: "9000"
-        # - name: POSTGRES_USER
-        #   valueFrom:
-        #     secretKeyRef:
-        #       name: postgres-credentials
-        #       key: user
-        # - name: POSTGRES_PASSWORD
-        #   valueFrom:
-        #     secretKeyRef:
-        #       name: postgres-credentials
-        #       key: password
-# 
         - name: DB_HOST
           value: "postgres"
         - name: DB_PORT
