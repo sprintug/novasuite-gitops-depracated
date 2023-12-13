@@ -55,4 +55,4 @@ spec:
           value: "24hrs"
       
       restartPolicy: Always
-      # imagePullPolicy: Always
+      imagePullPolicy: Always
